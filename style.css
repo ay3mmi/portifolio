@@ -1,0 +1,150 @@
+ *{box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+  font-style: normal;
+  transition: 0.5s;
+ }
+
+ main{
+  color: var(--fonte);
+ }
+
+:root{
+  --fonte: black;
+  --botao: #C7D3C0;
+  --bloco-informacoes:linear-gradient(90deg,#F7F4ED, #E8CE99,);
+  --fundo: linear-gradient(90deg, #F7F4ED, #C7D3C0);
+  --pastas: #A4C393;
+  --linha-cor: #aba9a9;
+}
+.dark-mode{
+     --fonte: white;
+    --botao: #715B82;
+    --bloco-informacoes: linear-gradient(90deg,#573452, #725473);
+    --fundo: linear-gradient(90deg, #604A61, #3E213A);
+    --pastas: #715B82;
+    --linha-cor: #171717;
+    background-position: 00% 00%;
+}
+
+.botao{
+  background-color: var(--botao);
+  font-family: "Abhaya Libre", serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 18px;
+  width: 76px;
+  height: 31px;
+  border-radius: 16px;
+  border: none;
+
+}
+
+body{
+  background-image: var(--fundo);
+  height: 100%;
+  margin: 0;
+  background-size: 400%;
+  background-position: 100% 100%;
+  transition: 1s ease;
+}
+
+ li{
+     list-style-type: none;
+}
+
+a{text-decoration: none;
+   color:var(--fonte);
+}
+
+.barra-pesquisa{
+  display: flex;
+  padding: 5px;
+  margin: 20px;
+  gap: 20px;
+  font-family: "Abhaya Libre", serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 16px;
+}
+
+#linha{
+  background-color: var(--linha-cor);
+  width: 1870px;
+  height: 3px;
+  display: block;
+  margin-top: 1vh;
+}
+
+.curriculo{
+  margin-left: 73%;
+}
+
+.introducao{
+  display: flex;
+  flex-direction: column;
+  padding: 100px;
+}
+
+.nome{
+  font-family: "Dela Gothic One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 48px;
+}
+
+.dev-font{
+   font-family: "Dela Gothic One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 24px;
+}
+
+.texto-introducao{
+ font-family: "Neuton", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 27px;
+}
+
+.sobre-mim{
+   display: flex;
+  flex-direction: column;
+  padding: 100px;
+}
+
+.format{
+  font-family: "Dela Gothic One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 48px;
+}
+
+.introduct{ font-family: "Neuton", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 27px;
+}
+
+.habilidades{
+   display: flex;
+  flex-direction: column;
+  padding: 100px;
+}
+
+.habi{
+  font-family: "Dela Gothic One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 48px;
+}
+
+.local-habilidades{
+  background-image: var(--bloco-informacoes);
+width: 1255px;
+height: 661px;
+border-radius: 16px;
+border: solid;
+color: var(--fonte);
+}
