@@ -62,11 +62,16 @@ a{text-decoration: none;
   display: flex;
   padding: 5px;
   margin: 20px;
-  gap: 20px;
+  gap: 16px;
   font-family: "Abhaya Libre", serif;
   font-weight: 800;
   font-style: normal;
-  font-size: 16px;
+  font-size: 17px;
+}
+
+.espacamento{
+
+  margin-top: 0.3%;
 }
 
 #linha{
@@ -74,7 +79,7 @@ a{text-decoration: none;
   width: 1870px;
   height: 3px;
   display: block;
-  margin-top: 1vh;
+  margin-top: -2vh;
 }
 
 .curriculo{
