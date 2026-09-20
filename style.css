@@ -1,7 +1,7 @@
  *{box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-weight: normal;
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
   font-style: normal;
   transition: 0.5s;
  }
@@ -176,13 +176,80 @@ border: solid, black;
 color: var(--fonte);
 }
 
+.projetos{
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+.projeto-font{
+  font-family: "Dela Gothic One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 48px;
+}
+
+.contato-font{
+  font-family: "Dela Gothic One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 48px;
+}
 
 @media(max-width:786px){
   .container-infos{
     display: block;
     text-align: center;
   } 
+
   .container-caixa{
     margin: 2em 2em;
+  }
+
+  .introducao{
+    padding: 40px;
+  }
+
+  .nome{
+  font-size: 36px;
+  }
+
+  .sobre-mim{
+    padding: 40px;
+  }
+
+  .format{
+    font-size: 36px;
+  }
+
+  .habilidades{
+    padding: 40px;
+  }
+
+  .habi{
+    font-size: 36px;
+  }
+
+  .local-habilidades{
+    margin-left: -3.6vh;
+  width: 340px;
+  height: 400px;
+  }
+
+  .projetos{
+    padding: 40px;
+    font-size: 24px;
+  }
+
+  .projeto-font{
+    font-size: 36px;
+  }
+
+  .contato{
+    padding: 40px;
+  }
+
+  .contato-font{
+    font-size: 36px;
   }
 }
