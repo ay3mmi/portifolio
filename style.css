@@ -153,3 +153,10 @@ border-radius: 16px;
 border: solid, black;
 color: var(--fonte);
 }
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+    width: 100%;
+    padding: 10px;
+  }
+}
