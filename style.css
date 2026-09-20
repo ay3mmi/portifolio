@@ -50,6 +50,20 @@ body{
   transition: 1s ease;
 }
 
+.container{
+  display: grid;
+    gap: 10px;
+  padding: 20px;
+  position: fixed;
+  height: 99px;
+  width: auto;
+
+}
+.basico{
+  
+  grid-template-rows: repeat(auto-fit,minmax(60px,1fr));
+}
+
  li{
      list-style-type: none;
 }
@@ -57,11 +71,10 @@ body{
 a{text-decoration: none;
    color:var(--fonte);
 }
-
 .barra-pesquisa{
   display: flex;
   padding: 5px;
-  margin: 20px;
+  margin: 10px;
   gap: 16px;
   font-family: "Abhaya Libre", serif;
   font-weight: 800;
@@ -70,26 +83,35 @@ a{text-decoration: none;
 }
 
 .espacamento{
-
   margin-top: 0.3%;
 }
 
 #linha{
   background-color: var(--linha-cor);
   width: 1870px;
-  height: 3px;
-  display: block;
-  margin-top: -2vh;
+  height: 2px;
+  margin-top: -1%;
 }
 
 .curriculo{
   margin-left: 73%;
 }
 
+.container-infos{
+  display: grid;
+  gap: 10%;
+}
+
+
 .introducao{
-  display: flex;
-  flex-direction: column;
   padding: 100px;
+}
+
+.container-caixa{
+  line-height: 1.6;
+  text-align: left;
+  max-width: 790px;
+  padding: 20px;
 }
 
 .nome{
@@ -100,6 +122,7 @@ a{text-decoration: none;
 }
 
 .dev-font{
+  display: block;
    font-family: "Dela Gothic One", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -133,7 +156,6 @@ a{text-decoration: none;
 }
 
 .habilidades{
-   display: flex;
   flex-direction: column;
   padding: 100px;
 }
@@ -153,10 +175,14 @@ border-radius: 16px;
 border: solid, black;
 color: var(--fonte);
 }
-@media (max-width: 768px) {
-  body {
-    font-size: 14px;
-    width: 100%;
-    padding: 10px;
+
+
+@media(max-width:786px){
+  .container-infos{
+    display: block;
+    text-align: center;
+  } 
+  .container-caixa{
+    margin: 2em 2em;
   }
 }
