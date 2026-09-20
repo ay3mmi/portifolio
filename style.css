@@ -13,16 +13,15 @@
 :root{
   --fonte: black;
   --botao: #C7D3C0;
-  --bloco-informacoes:linear-gradient(90deg,#F7F4ED, #E8CE99,);
-  --fundo: linear-gradient(90deg, #F7F4ED, #C7D3C0);
+  --bloco-informacoes:linear-gradient(0deg,#E8CE99,#F7F4ED,#F7F4ED);
+  --fundo: linear-gradient(90deg,#604A61, #3E213A,#F7F4ED, #C7D3C0);
   --pastas: #A4C393;
   --linha-cor: #aba9a9;
 }
 .dark-mode{
      --fonte: white;
     --botao: #715B82;
-    --bloco-informacoes: linear-gradient(90deg,#573452, #725473);
-    --fundo: linear-gradient(90deg, #604A61, #3E213A);
+    --bloco-informacoes: linear-gradient(0deg,#725473,#573452);
     --pastas: #715B82;
     --linha-cor: #171717;
     background-position: 00% 00%;
@@ -30,6 +29,7 @@
 
 .botao{
   background-color: var(--botao);
+  color: var(--fonte);
   font-family: "Abhaya Libre", serif;
   font-weight: 800;
   font-style: normal;
@@ -146,10 +146,10 @@ a{text-decoration: none;
 }
 
 .local-habilidades{
-  background-image: var(--bloco-informacoes);
+background-image: var(--bloco-informacoes);
 width: 1255px;
 height: 661px;
 border-radius: 16px;
-border: solid;
+border: solid, black;
 color: var(--fonte);
 }
