@@ -50,9 +50,11 @@ body{
   transition: 1s ease;
 }
 
+/*menu*/
+
 .container{
   display: grid;
-    gap: 10px;
+  gap: 10px;
   padding: 20px;
   position: fixed;
   height: 99px;
@@ -96,6 +98,8 @@ a{text-decoration: none;
 .curriculo{
   margin-left: 73%;
 }
+
+/*Informaçoes, sobre mim*/
 
 .container-infos{
   display: grid;
@@ -155,8 +159,9 @@ a{text-decoration: none;
   font-size: 27px;
 }
 
+/*Pastas*/
+
 .habilidades{
-  flex-direction: column;
   padding: 100px;
 }
 
@@ -165,6 +170,7 @@ a{text-decoration: none;
   font-weight: 400;
   font-style: normal;
   font-size: 48px;
+  margin: 0 0 6px;
 }
 
 .local-habilidades{
@@ -175,6 +181,24 @@ a{text-decoration: none;
   border: solid, black;
   color: var(--fonte);
 }
+
+.folders{
+  max-width: 780px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 44px 24px;
+  justify-items: center;
+  align-items: end;
+}
+
+@media(max-width: 640px){
+  .folders{grid-template-columns: 1fr;
+  max-width: 320px;
+  }
+}
+
+/*Projetos*/
 
 .projetos{
   padding: 100px;
@@ -195,6 +219,8 @@ a{text-decoration: none;
   font-style: normal;
   font-size: 27px;
 }
+
+/*Contato*/
 
 .contato-font{
   font-family: "Dela Gothic One", sans-serif;
