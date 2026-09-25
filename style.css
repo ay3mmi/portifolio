@@ -19,6 +19,7 @@
   --pastas: linear-gradient(90deg, #A4C393,#C7D3C0);
   --linha-cor: #aba9a9;
   --borda: black;
+  --botao2: #a8b99f ;
   --pasta-dentro: #eae6e6;
 }
 .dark-mode{
@@ -30,6 +31,7 @@
     background-position: 00% 00%;
     --borda: black;
     --pasta-dentro: #eae6e6;
+    --botao2: #5e5069 ;
 }
 
 .botao{
@@ -45,6 +47,7 @@
   border: none;
 
 }
+
 
 body{
   background-image: var(--fundo);
@@ -431,11 +434,21 @@ align-items: end;
 
 /*Contato*/
 
+.contato{
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
 .contato-font{
   font-family: "Dela Gothic One", sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 48px;
+}
+
+.formatacao-contato{
+
 }
 
 /*Formatação diferentes telas*/
@@ -460,11 +473,16 @@ align-items: end;
   }
 
   .sobre-mim{
-    padding: 40px;
+    padding: 10px;
   }
+
 
   .format{
     font-size: 36px;
+  }
+
+  .habi{
+    margin-right: 5vh;
   }
 
   .habilidades{
