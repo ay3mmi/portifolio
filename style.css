@@ -18,6 +18,7 @@
   --fundo: linear-gradient(90deg,#604A61, #3E213A,#F7F4ED, #C7D3C0);
   --pastas: linear-gradient(90deg, #A4C393,#C7D3C0);
   --linha-cor: #aba9a9;
+  --fundo-barra-de-pesquisa:linear-gradient(90deg,#F7F4ED, #C7D3C0); 
   --borda: black;
   --botao2: #a8b99f ;
   --pasta-dentro: #eae6e6;
@@ -28,6 +29,7 @@
     --bloco-informacoes: linear-gradient(0deg,#725473,#573452);
     --pastas: linear-gradient(90deg, #715B82,#4A2850);
     --linha-cor: #171717;
+    --fundo-barra-de-pesquisa:linear-gradient(90deg,#604A61, #3E213A); 
     background-position: 00% 00%;
     --borda: black;
     --pasta-dentro: #eae6e6;
@@ -61,13 +63,14 @@ body{
 /*menu*/
 
 .container{
+  background-image: var(--fundo-barra-de-pesquisa);
   display: grid;
   gap: 10px;
   padding: 20px;
   position: fixed;
-  height: 99px;
+  height: 77px;
   width: auto;
-
+ z-index: 9999;
 }
 .basico{
   
@@ -230,6 +233,7 @@ align-items: end;
     max-width: 320px;
   }
 }
+
 
 .skill-folder{
   --spread: 64px;
@@ -458,6 +462,7 @@ align-items: end;
     display: block;
     text-align: center;
   } 
+
 
 
   .container-caixa{
