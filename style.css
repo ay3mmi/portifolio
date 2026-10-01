@@ -12,15 +12,14 @@
  }
 
 :root{
+  --fundo-barra-de-pesquisa: linear-gradient(90deg, #F7F4ED, #C7D3C0);
   --fonte: black;
   --botao: #C7D3C0;
   --bloco-informacoes:linear-gradient(0deg,#E8CE99,#F7F4ED,#F7F4ED);
   --fundo: linear-gradient(90deg,#604A61, #3E213A,#F7F4ED, #C7D3C0);
   --pastas: linear-gradient(90deg, #A4C393,#C7D3C0);
   --linha-cor: #aba9a9;
-  --fundo-barra-de-pesquisa:linear-gradient(90deg,#F7F4ED, #C7D3C0); 
   --borda: black;
-  --botao2: #a8b99f ;
   --pasta-dentro: #eae6e6;
 }
 .dark-mode{
@@ -29,11 +28,10 @@
     --bloco-informacoes: linear-gradient(0deg,#725473,#573452);
     --pastas: linear-gradient(90deg, #715B82,#4A2850);
     --linha-cor: #171717;
-    --fundo-barra-de-pesquisa:linear-gradient(90deg,#604A61, #3E213A); 
     background-position: 00% 00%;
     --borda: black;
     --pasta-dentro: #eae6e6;
-    --botao2: #5e5069 ;
+    --fundo-barra-de-pesquisa: linear-gradient(90deg, #604A61, #3E213A);
 }
 
 .botao{
@@ -50,7 +48,6 @@
 
 }
 
-
 body{
   background-image: var(--fundo);
   height: 100%;
@@ -63,14 +60,14 @@ body{
 /*menu*/
 
 .container{
-  background-image: var(--fundo-barra-de-pesquisa);
+  background-image:var(--fundo-barra-de-pesquisa)  ;
   display: grid;
   gap: 10px;
   padding: 20px;
   position: fixed;
   height: 77px;
   width: auto;
- z-index: 9999;
+
 }
 .basico{
   
@@ -107,13 +104,15 @@ a{text-decoration: none;
 }
 
 .curriculo{
-  margin-left: 73%;
+  margin-left: 67%;
 }
 
 /*Informaçoes, sobre mim*/
 
 .container-infos{
   display: grid;
+  grid-template-columns: repeat(1,59%);
+  grid-template-rows: repeat(5,1fr);
   gap: 10%;
 }
 
@@ -233,7 +232,6 @@ align-items: end;
     max-width: 320px;
   }
 }
-
 
 .skill-folder{
   --spread: 64px;
@@ -438,21 +436,11 @@ align-items: end;
 
 /*Contato*/
 
-.contato{
-  padding: 100px;
-  display: flex;
-  flex-direction: column;
-}
-
 .contato-font{
   font-family: "Dela Gothic One", sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 48px;
-}
-
-.formatacao-contato{
-
 }
 
 /*Formatação diferentes telas*/
@@ -462,7 +450,6 @@ align-items: end;
     display: block;
     text-align: center;
   } 
-
 
 
   .container-caixa{
@@ -478,16 +465,11 @@ align-items: end;
   }
 
   .sobre-mim{
-    padding: 10px;
+    padding: 40px;
   }
-
 
   .format{
     font-size: 36px;
-  }
-
-  .habi{
-    margin-right: 5vh;
   }
 
   .habilidades{
