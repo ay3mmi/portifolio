@@ -43,9 +43,9 @@
   font-size: 18px;
   width: 76px;
   height: 31px;
-  border-radius: 16px;
+  border-radius: 13px;
   border: none;
-
+  cursor: pointer;
 }
 
 body{
@@ -189,7 +189,7 @@ a{text-decoration: none;
   width: 1255px;
   height: 661px;
   border-radius: 16px;
-  border: solid, black;
+  border: 1.5px solid, black;
   color: var(--fonte);
 
 }
@@ -446,7 +446,7 @@ align-items: end;
   width: 403px;
   height: 553px;
   border-radius: 18px;
-  border: 1px solid;
+  border: 1.5px solid;
 }
 
 #font-formatacao{
@@ -475,26 +475,70 @@ align-items: end;
     text-align: center;
   } 
 
+  .espacamento{
+    margin-top: -1000vh;
+    opacity: 0;
+  }
+
+  #linha{
+    margin-top: -2vh;
+    max-width: 378px;
+    max-height: 2px;
+  }
+
+  .botao{
+    width: 76px;
+    height: 31px;
+    font-size: 18px;
+    border-radius: 13px;
+    border: none;
+    
+  }
+  
+  .barra-pesquisa{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   /*Sobre mim*/
 
   .container-caixa{
     margin: 2em 2em;
+    max-width: 580px;
   }
 
   .introducao{
+    margin-top: 3vh;
     padding: 40px;
+    margin-left:4vh;
   }
 
   .nome{
-  font-size: 36px;
+  font-size: 26px;
   }
 
   .sobre-mim{
     padding: 40px;
+
+  }
+
+  .dev-font{
+    font-size: 20px;
+  }
+
+  .texto-introducao p{
+    font-size: 18px;
+    line-height: 1.8; 
+    max-width: 480px; 
   }
 
   .format{
-    font-size: 36px;
+    font-size: 26px;
+  }
+
+  .introduct p{
+    font-size: 18px;
+    line-height: 1.5;
   }
 
   /*Habilidades e Pastas*/
@@ -504,7 +548,8 @@ align-items: end;
   }
 
   .habi{
-    font-size: 36px;
+    font-size: 26px;
+    margin-left: -13vh;
   }
 
   .local-habilidades{
@@ -544,10 +589,16 @@ align-items: end;
     }
 
 /*Projetos*/
-
+  
   .projetos{
-    padding: 40px;
+    padding: 50px;
     font-size: 24px;
+    max-width: 700px;
+  }
+
+  .formatacao-projeto{
+    font-size: 18px;
+    text-align: left;
   }
 
   .projeto-container{
@@ -559,10 +610,18 @@ align-items: end;
   .projeto{
     width: 320px;
     height: 420px;
+    border: 1.5px solid black;
   }
 
   .projeto-font{
-    font-size: 36px;
+    margin-bottom: 25px;
+    margin-left: -24vh;
+    font-size: 26px;
+  }
+
+  #font-formatacao{
+    font-size: 20.5px;
+    text-align: center;
   }
 
 
@@ -573,6 +632,6 @@ align-items: end;
   }
 
   .contato-font{
-    font-size: 36px;
+    font-size: 26px;
   }
 }
