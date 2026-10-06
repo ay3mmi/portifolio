@@ -18,7 +18,7 @@
   --bloco-informacoes:linear-gradient(0deg,#E8CE99,#F7F4ED,#F7F4ED);
   --fundo: linear-gradient(90deg,#604A61, #3E213A,#F7F4ED, #C7D3C0);
   --pastas: linear-gradient(90deg, #A4C393,#C7D3C0);
-  --linha-cor: #aba9a9;
+  --linha-cor: #cbcaca;
   --borda: black;
   --pasta-dentro: #eae6e6;
 }
@@ -103,6 +103,7 @@ a{text-decoration: none;
   height: 2px;
   margin-top: -1%;
 }
+
 
 .curriculo{
   margin-left: 67%;
@@ -460,11 +461,62 @@ align-items: end;
 
 /*Contato*/
 
+.contato{
+  padding: 100px;
+  line-height: 1.6;
+  text-align: left;
+  max-width: 790px;
+}
+
 .contato-font{
   font-family: "Dela Gothic One", sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 48px;
+}
+
+.introducao-contato{
+  font-family: "Neuton", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 27px;
+}
+
+.contatos-fromatacao{
+  margin-top: 4vh;
+  font-family: "Dela Gothic One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 2.5;
+  font-size: 48px;
+}
+
+.formulario{
+  font-family: "Dela Gothic One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.5;
+  font-size: 18px;
+  margin-left: 10%;
+  margin-top: 4vh;
+  display: grid; 
+  grid-template-columns: repeat(1,50%);
+  height: 240px;
+}
+#enviar{
+  margin-top: 3%;
+  margin-left: 40%;
+  width: 90px;
+  height: 20px;
+}
+
+.formulario-container{
+  background-image: var(--bloco-informacoes);
+  width: 1255px;
+  height: 661px;
+  border-radius: 16px;
+  border: 1.5px solid, black;
+  color: var(--fonte);
 }
 
 /*Formatação diferentes telas*/
