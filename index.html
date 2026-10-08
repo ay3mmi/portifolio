@@ -14,11 +14,11 @@
     <div class="barra-pesquisa">
         <button id="toggle-theme" class="botao">Tema</button>
       <li class="espacamento">
-        <a href="">Sobre mim</a>
+        <a href="#sesao1">Sobre mim</a>
       </li>
-      <li class="espacamento"><a href="">Habilidades</a></li> 
-      <li class="espacamento"><a href="">Projetos</a></li>
-      <li class="espacamento"><a href="">Contato</a></li>
+      <li class="espacamento"><a href="#habilidadesContainer">Habilidades</a></li> 
+      <li class="espacamento"><a href="#sesao3">Projetos</a></li>
+      <li class="espacamento"><a href="#sesao4">Contato</a></li>
       <div class="curriculo">
       <li class="espacamento"><a href="https://docs.google.com/document/d/1y0abhtakLEDl7i7_sJ-q9DUKnFBE0XWatfsIlqoSoD4/edit?usp=sharing">Curriculo</a></li>
       </div>
@@ -37,7 +37,7 @@
         </div>
         </span>
 
-        <div class="sobre-mim container-caixa">
+        <div class="sobre-mim container-caixa" id="sesao1">
             <span class="format">Sobre mim</span>
             <span class="introduct"><p>Me chamo Sofia Partata, tenho 18 anos e atualmente
                 estou cursando o  ensino médio técnico no colégio
@@ -61,7 +61,7 @@
             </div>
         </section>
 
-        <div class="projetos">
+        <div class="projetos" id="sesao3">
             <span class="projeto-font">Projetos</span>
             <span class="formatacao-projeto"><p>Alguns projetos solo que eu fiz durante o meu tempo livre</p></span>
             <div class="projeto-container">
@@ -71,22 +71,23 @@
             </div>
         </div>
         
-        <div class="contato">
+        <div class="contato" id="sesao4">
             <span class="contato-font">Contato</span><br>
             <span class="introducao-contato"> <p>Entre em contato comigo através do formulário ou github</p></span>
             <div>
-            <li class="github contatos-fromatacao">GITHUB</li>
+            <li class="github contatos-fromatacao"><a href="">GITHUB</a></li>
         </div>
         <div class="formulario-container">
         <form class="formulario" id="forms">
         <label>Nome</label>
         <input type="text" placeholder="Seu Nome">
+        <span></span>
         <label>E-mail</label>
         <input type="text" placeholder="Seu E-mail">
-        <label>Telefone</label>
-        <input type="tel" placeholder="+55 (31) x xxxx-xxxx">
-        
-
+        <span></span>
+        <label>Mensagem</label>
+        <input type="text">
+        <span></span>
         <button type="submit" id="enviar">Enviar</button>
         </form>
         </div>

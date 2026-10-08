@@ -57,6 +57,8 @@ body{
   transition: 1s ease;
 }
 
+
+
 /*menu*/
 
 .container{
@@ -518,6 +520,15 @@ align-items: end;
   border: 1.5px solid, black;
   color: var(--fonte);
 }
+
+input {border: 0px;
+    border-bottom: solid 1.4px }
+    input:focus { border: solid 1px rgb(29, 29, 29);
+      outline: none
+    }
+    
+    input:hover { border: solid 1px rgb(0, 0, 0)
+    }
 
 /*Formatação diferentes telas*/
 

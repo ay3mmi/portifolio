@@ -9,6 +9,36 @@ toogleButton.addEventListener('click', ()=>{
  
 })
 
+//animação suave para o scroll
+
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    const targetId = this.getAttribute('href');
+    const targetElement = document.querySelector(targetId);
+    
+    if (targetElement) {
+      // pega a altura real do menu no momento do clique (seja PC ou Telemóvel)
+      const menuHeight = document.querySelector('.barra-pesquisa').offsetHeight;
+      
+      // Calcula a posição descontando o menu
+      const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+      const offsetPosition = elementPosition - menuHeight;
+
+      // Executa a rolagem suave
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  });
+});
+
+//mascara formulario
+
+//mascara mensagem
+
 //conteudo dentro da pasta
 
 "use strict";
