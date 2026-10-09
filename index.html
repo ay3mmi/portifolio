@@ -11,8 +11,15 @@
 </head>
 <body>
     <section class="container basico">
-    <div class="barra-pesquisa">
+    <nav class="barra-pesquisa">
+        <button class="hamburger" aria-label="Abrir menu" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
         <button id="toggle-theme" class="botao">Tema</button>
+        <ul class="nav-menu">
       <li class="espacamento">
         <a href="#sesao1">Sobre mim</a>
       </li>
@@ -22,7 +29,8 @@
       <div class="curriculo">
       <li class="espacamento"><a href="https://docs.google.com/document/d/1y0abhtakLEDl7i7_sJ-q9DUKnFBE0XWatfsIlqoSoD4/edit?usp=sharing">Curriculo</a></li>
       </div>
-    </div>
+      </ul>
+    </nav>
      <span id="linha"></span>
     </section>
     <main class="container-infos">
@@ -80,15 +88,18 @@
         <div class="formulario-container">
         <form class="formulario" id="forms">
         <label>Nome</label>
-        <input type="text" placeholder="Seu Nome">
+        <input class="form-size" type="text" placeholder="Seu Nome">
         <span></span>
         <label>E-mail</label>
-        <input type="text" placeholder="Seu E-mail">
+        <input class="form-size" type="text" placeholder="Seu E-mail">
+        <span></span>
+        <label>Assunto</label>
+        <input class="form-size" type="text" placeholder="O que deseja falar">
         <span></span>
         <label>Mensagem</label>
-        <input type="text">
+        <textarea class="form-size" class="mensagem" name="mensagem" rows="5" cols="33"></textarea>
         <span></span>
-        <button type="submit" id="enviar">Enviar</button>
+        <button class="form-size" type="submit" id="enviar">Enviar</button>
         </form>
         </div>
         </div>

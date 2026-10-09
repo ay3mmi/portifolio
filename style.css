@@ -15,6 +15,8 @@
   --fundo-barra-de-pesquisa: linear-gradient(90deg, #F7F4ED, #C7D3C0);
   --fonte: black;
   --botao: #C7D3C0;
+  --menu-hamb: #F7F4ED;
+  --menu: #C7D3C0;
   --bloco-informacoes:linear-gradient(0deg,#E8CE99,#F7F4ED,#F7F4ED);
   --fundo: linear-gradient(90deg,#604A61, #3E213A,#F7F4ED, #C7D3C0);
   --pastas: linear-gradient(90deg, #A4C393,#C7D3C0);
@@ -25,6 +27,8 @@
 .dark-mode{
     --fonte: white;
     --botao: #715B82;
+    --menu-hamb:#120f08;
+    --menu: #715B82;
     --bloco-informacoes: linear-gradient(0deg,#725473,#573452);
     --pastas: linear-gradient(90deg, #715B82,#4A2850);
     --linha-cor: #171717;
@@ -95,8 +99,41 @@ a{text-decoration: none;
   font-size: 17px;
 }
 
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-menu li a{
+  padding: 10px;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.bar {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: var(--fonte);
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-menu li a:hover,
+.nav-menu li a:focus{
+  background-color: var(--menu);
+}
+
+
 .espacamento{
-  margin-top: 0.3%;
+  margin-top: 0.10%;
 }
 
 #linha{
@@ -108,7 +145,53 @@ a{text-decoration: none;
 
 
 .curriculo{
-  margin-left: 67%;
+  margin-left: 135vh;
+}
+
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: flex; /* Exibe o botão hambúrguer */
+  }
+  .curriculo{
+  margin-left: 0;
+}
+.espacamento{
+  margin-top: -2.3vh;
+  margin-left: 2vh;
+}
+
+  .nav-menu {
+    position: absolute;
+    top: 60px;
+    left: -1000%; /* Inicialmente escondido fora do ecrã */
+    width: 209px;
+    margin-left: -10vh;
+    border-radius: 13px;
+    height: 228px;
+    background-color:var(--menu-hamb) ;
+    flex-direction: column;
+    padding-top: 3rem;
+    gap: 2.5rem;
+    transition: left 0.4s ease-in-out;
+  }
+
+  /* Estado quando o menu está ativo (aberto) */
+  .nav-menu.active {
+    left: 100px;
+    margin-top: 2vh;
+  }
+
+   .hamburger.active .bar:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
 }
 
 /*Informaçoes, sobre mim*/
@@ -499,26 +582,59 @@ align-items: end;
   font-style: normal;
   line-height: 1.5;
   font-size: 18px;
-  margin-left: 10%;
+  margin-left: 13%;
   margin-top: 4vh;
   display: grid; 
   grid-template-columns: repeat(1,50%);
   height: 240px;
 }
+
+.form-size{
+  width: 570px;
+}
+
 #enviar{
-  margin-top: 3%;
-  margin-left: 40%;
+  background-color: var(--botao);
+  border-radius: 13px;
+  border: none;
+  font-family: "Abhaya Libre", serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 18px;
+  color: var(--fonte);
+  font-size: 18px;
+  margin-top: 4%;
+  margin-left: 56.9%;
   width: 90px;
-  height: 20px;
+  height: 26px;
+  cursor: pointer;
 }
 
 .formulario-container{
   background-image: var(--bloco-informacoes);
-  width: 1255px;
-  height: 661px;
+  width: 955px;
+  height: 461px;
   border-radius: 16px;
   border: 1.5px solid, black;
   color: var(--fonte);
+}
+
+
+
+.mensagem {
+  width: 800px;
+  height: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: "Abhaya Libre", serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 16px;
+}
+
+textarea{
+  resize: vertical;
 }
 
 input {border: 0px;
@@ -532,7 +648,396 @@ input {border: 0px;
 
 /*Formatação diferentes telas*/
 
-@media(max-width:786px){
+@media screen and (max-width:768px){
+  .container-infos{
+    display: block;
+    text-align: center;
+  } 
+
+
+  #linha{
+    margin-top: -2vh;
+    max-width: 713px;
+    max-height: 2px;
+  }
+
+  .botao{
+    width: 76px;
+    height: 31px;
+    font-size: 18px;
+    border-radius: 13px;
+    border: none;
+    
+  }
+  
+  .barra-pesquisa{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  /*Sobre mim*/
+
+  .container-caixa{
+    margin: 2em 2em;
+    max-width: 580px;
+  }
+
+  .introducao{
+    margin-top: 3vh;
+    padding: 40px;
+    margin-left:4vh;
+  }
+
+  .nome{
+  font-size: 28px;
+  }
+
+  .sobre-mim{
+    padding: 40px;
+
+  }
+
+  .dev-font{
+    font-size: 20px;
+  }
+
+  .texto-introducao p{
+    font-size: 18px;
+    line-height: 1.8; 
+    max-width: 480px; 
+  }
+
+  .format{
+    font-size: 28px;
+  }
+
+  .introduct p{
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  /*Habilidades e Pastas*/
+
+  .habilidades{
+    padding: 30px;
+  }
+
+  .habi{
+    font-size: 28px;
+    margin-left: -50vh;
+  }
+
+  .local-habilidades{
+  margin-left: -0.3vh;
+  width: 680px;
+  height: 1100px;
+  }
+
+  .habilidade-folders{
+    max-width: 780px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 44px 24px;
+  justify-items: center;
+  align-items: end;
+  }
+
+  .folder-back1{
+      position: absolute;
+      inset: 0;
+      margin-left: 20%;
+      margin-top: 10%;
+      width: 140px;
+      height: 90px;
+      z-index: 1;
+      border-radius: 8px 8px 3px 3px;
+      background: var(--pasta-dentro);
+      border: 1.5px solid var(--borda);
+    }
+
+    .folder-label {
+      margin-bottom: 3vh;
+      text-align: center;
+      font-size: 17px;
+
+    }
+
+/*Projetos*/
+  
+  .projetos{
+    padding: 50px;
+    font-size: 24px;
+    max-width: 700px;
+  }
+
+  .formatacao-projeto{
+    font-size: 18px;
+    margin-left: 2vh;
+    text-align: left;
+  }
+
+  .projeto-container{
+    display: grid;
+    margin-left: 20vh;
+    grid-template-rows: repeat(3,35%);
+    grid-template-columns: repeat(1,76%);
+  }
+
+  .projeto{
+    width: 320px;
+    height: 420px;
+    border: 1.5px solid black;
+  }
+
+  .projeto-font{
+    margin-bottom: 25px;
+    margin-left: -50vh;
+    font-size: 28px;
+  }
+
+  #font-formatacao{
+    font-size: 20.5px;
+    text-align: center;
+  }
+
+
+  /*Contato*/
+
+  .contato{
+    margin-left: 4vh;
+    padding: 40px;
+  }
+
+  .contato-font{
+    font-size: 28px;
+  }
+
+  .introducao-contato{
+    font-size: 18px;
+  }
+
+  .contatos-fromatacao{
+    font-size: 28px;
+  }
+
+  .formulario-container{
+  width: 655px;
+  height: 461px;
+}
+
+.formulario{
+   margin-left: 13%;
+}
+
+.form-size{
+  width: 500px;
+}
+
+#enviar{
+  font-size: 18px;
+  margin-top: 4%;
+  margin-left: 66.9%;
+  width: 90px;
+  height: 26px;
+  cursor: pointer;
+}
+
+textarea {
+  width: 200px;
+}
+}
+
+
+@media screen and (max-width:607px){
+  .container-infos{
+    display: block;
+    text-align: center;
+  } 
+
+  .espacamento{
+    margin-top: -1000vh;
+    opacity: 0;
+  }
+
+  #linha{
+    margin-top: -2vh;
+    max-width: 504px;
+    max-height: 2px;
+  }
+
+  .botao{
+    width: 76px;
+    height: 31px;
+    font-size: 18px;
+    border-radius: 13px;
+    border: none;
+    
+  }
+  
+  .barra-pesquisa{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  /*Sobre mim*/
+
+  .container-caixa{
+    margin: 2em 2em;
+    max-width: 580px;
+  }
+
+  .introducao{
+    margin-top: 3vh;
+    padding: 40px;
+    margin-left:4vh;
+  }
+
+  .nome{
+  font-size: 26px;
+  }
+
+  .sobre-mim{
+    padding: 40px;
+
+  }
+
+  .dev-font{
+    font-size: 20px;
+  }
+
+  .texto-introducao p{
+    font-size: 18px;
+    line-height: 1.8; 
+    max-width: 480px; 
+  }
+
+  .format{
+    font-size: 26px;
+  }
+
+  .introduct p{
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  /*Habilidades e Pastas*/
+
+  .habilidades{
+    padding: 40px;
+  }
+
+  .habi{
+    font-size: 26px;
+    margin-left: -25vh;
+  }
+
+  .local-habilidades{
+  margin-left: 2vh;
+  width: 440px;
+  height: 1100px;
+  }
+
+  .habilidade-folders{
+    max-width: 780px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 44px 24px;
+  justify-items: center;
+  align-items: end;
+  }
+
+  .folder-back1{
+      position: absolute;
+      inset: 0;
+      margin-left: 19%;
+      margin-top: 10%;
+      width: 140px;
+      height: 90px;
+      z-index: 1;
+      border-radius: 8px 8px 3px 3px;
+      background: var(--pasta-dentro);
+      border: 1.5px solid var(--borda);
+    }
+
+    .folder-label {
+      margin-bottom: 3vh;
+      text-align: center;
+      font-size: 17px;
+
+    }
+
+/*Projetos*/
+  
+  .projetos{
+    padding: 50px;
+    font-size: 24px;
+    max-width: 700px;
+  }
+
+  .formatacao-projeto{
+    font-size: 18px;
+    text-align: left;
+    margin-left:1vh;
+  }
+
+  .projeto-container{
+    margin-left: 7vh;
+    display: grid;
+    grid-template-rows: repeat(3,35%);
+    grid-template-columns: repeat(1,76%);
+  }
+
+  .projeto{
+    width: 320px;
+    height: 420px;
+    border: 1.5px solid black;
+  }
+
+  .projeto-font{
+    margin-bottom: 25px;
+    margin-left: -34vh;
+    font-size: 26px;
+  }
+
+  #font-formatacao{
+    font-size: 20.5px;
+    text-align: center;
+  }
+
+
+  /*Contato*/
+
+  .contato{
+    padding: 40px;
+  }
+
+  .contato-font{
+    font-size: 26px;
+  }
+
+.formulario-container{
+  width: 440px;
+  height: 400px;
+}
+
+.form-size{
+  width: 300px;
+}
+
+#enviar{
+  margin-left: 12vh;
+}
+
+.formulario{
+margin-left: 8vh;
+}
+}
+
+/*Formatação diferentes telas*/
+
+@media screen and (max-width:530px){
   .container-infos{
     display: block;
     text-align: center;

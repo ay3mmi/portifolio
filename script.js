@@ -35,6 +35,30 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
   });
 });
 
+//menu hamburguer
+
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+
+hamburger.addEventListener("click", () => {
+  // Alterna o estado ativo do menu e do botão hambúrguer
+  hamburger.classList.toggle("active");
+  navMenu.classList.toggle("active");
+  
+  // Atualiza a acessibilidade ARIA
+  const isExpanded = hamburger.classList.contains("active");
+  hamburger.setAttribute("aria-expanded", isExpanded);
+});
+
+// Fecha o menu automaticamente ao clicar num link
+document.querySelectorAll(".espacamento").forEach(link => {
+  link.addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+    hamburger.setAttribute("aria-expanded", "false");
+  });
+});
+
 //mascara formulario
 
 //mascara mensagem
