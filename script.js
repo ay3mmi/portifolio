@@ -1,16 +1,10 @@
 const toogleButton = document.getElementById('toggle-theme');
 
-const htmElement = document.body;
-
 toogleButton.addEventListener('click', ()=>{
-
-    htmElement.classList.toggle("dark-mode");
-   
- 
-})
+    document.body.classList.toggle("dark-mode");
+});
 
 //animação suave para o scroll
-
 document.querySelectorAll('a[href^="#"]').forEach(link => {
   link.addEventListener('click', function(e) {
     e.preventDefault();
@@ -19,14 +13,10 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
     const targetElement = document.querySelector(targetId);
     
     if (targetElement) {
-      // pega a altura real do menu no momento do clique (seja PC ou Telemóvel)
-      const menuHeight = document.querySelector('.barra-pesquisa').offsetHeight;
-      
-      // Calcula a posição descontando o menu
+      const menuHeight = document.querySelector('.container').offsetHeight;
       const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
       const offsetPosition = elementPosition - menuHeight;
 
-      // Executa a rolagem suave
       window.scrollTo({
         top: offsetPosition,
         behavior: 'smooth'
@@ -36,22 +26,18 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
 });
 
 //menu hamburguer
-
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
 
 hamburger.addEventListener("click", () => {
-  // Alterna o estado ativo do menu e do botão hambúrguer
   hamburger.classList.toggle("active");
   navMenu.classList.toggle("active");
-  
-  // Atualiza a acessibilidade ARIA
   const isExpanded = hamburger.classList.contains("active");
   hamburger.setAttribute("aria-expanded", isExpanded);
 });
 
 // Fecha o menu automaticamente ao clicar num link
-document.querySelectorAll(".espacamento").forEach(link => {
+document.querySelectorAll(".nav-menu a").forEach(link => {
   link.addEventListener("click", () => {
     hamburger.classList.remove("active");
     navMenu.classList.remove("active");
@@ -59,14 +45,8 @@ document.querySelectorAll(".espacamento").forEach(link => {
   });
 });
 
-//mascara formulario
-
-//mascara mensagem
-
 //conteudo dentro da pasta
-
 "use strict";
-
 
 const SKILLS_FOLDERS =[
     { key: "programacao", label:"Programação", icon: "icons/sinais-de-codigo-de-programacao.png", files: [
@@ -81,17 +61,15 @@ const SKILLS_FOLDERS =[
         {name: "CSS", icon: "icons/css.png", ext: ".css"},
         {name: "JavaScript", icon: "icons/javascript.png", ext: ".js"},
         {name: "React", icon: "icons/react.svg", ext: ".jsx"},
-]},
+    ]},
 
-{key: "design-app", label:"Design/App", icon: "icons/1063411.png", files: [
-    {name: "Figma", icon: "icons/figma.svg", ext: ".fig"},
-    {name: "PhotoShop", icon: "icons/photoshop.png", ext: ".psd"},
-    {name: "Krita", icon: "icons/35e84f9d85352609d20df7d7a73166bc2019b6eb-removebg-preview.png", ext: ".kra"},
-    {name: "Blender", icon: "icons/blender.png", ext: ".blend"},
-]},
-    
+    {key: "design-app", label:"Design/App", icon: "icons/1063411.png", files: [
+        {name: "Figma", icon: "icons/figma.svg", ext: ".fig"},
+        {name: "PhotoShop", icon: "icons/photoshop.png", ext: ".psd"},
+        {name: "Krita", icon: "icons/35e84f9d85352609d20df7d7a73166bc2019b6eb-removebg-preview.png", ext: ".kra"},
+        {name: "Blender", icon: "icons/blender.png", ext: ".blend"},
+    ]},
 ];
-
 
 function buildSkillFile(file, index, total){
  const mid = (total - 1) / 2;
@@ -138,20 +116,20 @@ function buildSkillFolder(folder){
     </span>
     <span>
     <div class="folder-label">${folder.label}</div>
-    <div class="folder-detail"${folder.files.length}></div>
+    <div class="folder-detail">${folder.files.length} itens</div>
     </span>
     </span>
-    </span>
-    `;
-btn.addEventListener("click", () => toggleFolder(wrap));
-wrap.append(filesWrap, btn);
-return wrap;
+    </span>`;
+    
+    btn.addEventListener("click", () => toggleFolder(wrap));
+    wrap.append(filesWrap, btn);
+    return wrap;
 }
 
 function closeOthers(expect){
     document.querySelectorAll(".skill-folder.open").forEach((el) =>{
         if (el !== expect) el.classList.remove("open");
-    })
+    });
 }
 
 function toggleFolder(el){
@@ -161,6 +139,6 @@ function toggleFolder(el){
 }
 
 const container = document.getElementById('habilidadeFolders');
-SKILLS_FOLDERS.forEach((f) => container.appendChild(buildSkillFolder(f)));
-
-
+if (container) {
+    SKILLS_FOLDERS.forEach((f) => container.appendChild(buildSkillFolder(f)));
+}
