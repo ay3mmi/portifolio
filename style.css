@@ -27,7 +27,7 @@
 .dark-mode{
     --fonte: white;
     --botao: #715B82;
-    --menu-hamb:#120f08;
+    --menu-hamb:#4A2850;
     --menu: #715B82;
     --bloco-informacoes: linear-gradient(0deg,#725473,#573452);
     --pastas: linear-gradient(90deg, #715B82,#4A2850);
@@ -855,14 +855,11 @@ textarea {
     text-align: center;
   } 
 
-  .espacamento{
-    margin-top: -1000vh;
-    opacity: 0;
-  }
+  
 
   #linha{
     margin-top: -2vh;
-    max-width: 504px;
+    max-width: 546px;
     max-height: 2px;
   }
 
@@ -1027,11 +1024,17 @@ textarea {
 }
 
 #enviar{
-  margin-left: 12vh;
+  margin-left: 11vh;
 }
+
 
 .formulario{
 margin-left: 8vh;
+}
+
+.nav-menu.active {
+  left: 100px;
+  margin-top: 1.6vh;
 }
 }
 
@@ -1043,10 +1046,6 @@ margin-left: 8vh;
     text-align: center;
   } 
 
-  .espacamento{
-    margin-top: -1000vh;
-    opacity: 0;
-  }
 
   #linha{
     margin-top: -2vh;
